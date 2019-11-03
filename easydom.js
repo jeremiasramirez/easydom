@@ -244,7 +244,8 @@ function deleteMsj(msj){
         }
 }
 function templateNotificationError(err){
-        if(err !== "" && err !== null && err !== undefined){
+	if(!document.getElementById("templateNotificationError")){      
+	  if(err !== "" && err !== null && err !== undefined){
 
             let templateNotification =  document.createElement("div");
                 templateNotification.setAttribute("class", "templateNotificationError");
@@ -259,12 +260,14 @@ function templateNotificationError(err){
                 document.body.appendChild(templateNotification);
 
                     deleteMsj(document.getElementById("templateNotificationError"));
-        }
+        	}
+	}
 }
 
 
     function templateNotificationInfo(err){
-        if(err !== "" && err !== null && err !== undefined){
+        if(!document.getElementById("templateNotificationInfo")){
+		if(err !== "" && err !== null && err !== undefined){
 
             let templateNotification =  document.createElement("div");
                 templateNotification.setAttribute("class", "templateNotificationInfo");
@@ -280,7 +283,8 @@ function templateNotificationError(err){
 
             //delete element
             deleteMsj(document.getElementById("templateNotificationInfo"))
-        }
+        	}
+	}
     }
 
 
