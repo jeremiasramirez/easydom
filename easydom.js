@@ -176,12 +176,76 @@
     }
 
 
+function addEnd(elementId=null, parentsId=null){
+
+    if(elementId != null){
+
+        if(parentsId != null){
+
+            parentsId.appendChild(elementId);
+
+        }
+        else{
+            console.error("parent empty")
+        }
+
+    }
+    else{
+        console.error("element child empty")
+    }
 
 
 
+}
+function addFirst(elementId=null, parentsId=null){
 
-    /*
+    if(elementId != null){
+
+        if(parentsId != null){
+
+            parentsId.insertAdjacentElement('afterbegin', elementId);
+
+        }
+        else{
+            console.error("parent empty")
+        }
+
+    }
+    else{
+
+        console.error("element child empty")
+    }
+
+
+
+}
+
+function withId(elementId){
+    if(elementId != null && elementId != ""){
+       
+       elementId= document.getElementById(elementId);
+
+       if(elementId){
+            return elementId
+       }
+
+    }
+    else{
+        console.log("error: empty id");
+    }
+}
+ 
+
+
+ 
+
+
+
+/*  
+    * withId("id"), obtiene elemento html por id
+    * addEnd(idElement, parent), agrega un elemento al final del parent, recibe el id del eleemento a agregar y el id del elemento padre 
+    * addFirst(idElement, parent), agrega un elemento al principio del parent, recibe el id del eleemento a agregar y el id del elemento padre 
     * windowError("title error", "description error"); msj error => muestra un mensaje de error, recibe el titulo del error y el mensaje
-    * windowAsk(msjWindow, url); lleva al usuario a cierto sitio, recibe un msj y una url a cual nos llevara
-    * */
+    * windowAsk(msjWindow, url); lleva al usuario a cierto sitio, recibe un msj y una url a cual nos llevara 
+*/
 
