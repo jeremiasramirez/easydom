@@ -146,6 +146,116 @@ body{
     }
 }
 
+.templateNotificationError {
+    min-width: 300px;
+    border: 0;
+    padding: 0 .5em .1em .5em;
+    height:40px;
+    border-radius: 3px;
+    background-color: red;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    animation: swipeLeft 2s .3s linear;
+    transition:1s;
+    margin: .5em;
+    animation: swipeLeftRight .6s .3s linear;
+
+}
+@keyframes swipeLeftRight{
+    0%{
+       opacity: 1;
+    }
+    40%{
+        transform: translateX(8px);
+        opacity: 0;
+
+    }
+    70%{
+        transform: translateX(-8px);
+        opacity: 1;
+
+    }
+    80%{
+        transform: translateX(0px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-8px);
+        opacity: .8;
+    }
+}
+
+.messageError{
+    color:white;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin: 0 0 -.3em 0;
+    padding-top: .4em;
+    word-spacing: 1px;
+    font-size: 17px;
+    text-align: center;
+    font-family: AlBattar;
+}
+
+
+
+.templateNotificationInfo {
+    min-width: 300px;
+    border: 0;
+    padding: 0 .5em 0 .5em;
+    height:40px;
+    border-radius: 3px;
+    background-color: white;
+    position: absolute;
+    border: 1px solid blue;
+    bottom:0;
+    left: 0;
+    transition:1s;
+    margin: .5em;
+    animation: swipeLeftRightInfo .6s .3s linear;
+
+}
+@keyframes swipeLeftRightInfo{
+    0%{
+       opacity: 1;
+    }
+    40%{
+        transform: translateX(8px);
+        opacity: 0;
+
+    }
+    70%{
+        transform: translateX(-8px);
+        opacity: 1;
+
+    }
+    80%{
+        transform: translateX(0px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-8px);
+        opacity: .8;
+    }
+}
+
+.messageInfo{
+    color: blue;
+    font-weight: 600;
+    letter-spacing: .5px;
+    line-height: 22px;
+    margin-top: .4em;
+    word-spacing: 1px;
+    font-size: 17px;
+    padding:0;
+    text-align: center;
+    font-family: AlBattar;
+}
+
+
+
+
 
 
 

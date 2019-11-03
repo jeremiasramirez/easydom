@@ -234,14 +234,81 @@ function withId(elementId){
         console.log("error: empty id");
     }
 }
+
+function deleteMsj(msj){
+        if(msj){
+            setTimeout(()=>{
+                msj.remove();
+            }, 4000);
+
+        }
+}
+function templateNotificationError(err){
+        if(err !== "" && err !== null && err !== undefined){
+
+            let templateNotification =  document.createElement("div");
+                templateNotification.setAttribute("class", "templateNotificationError");
+                templateNotification.setAttribute("id", "templateNotificationError");
+
+                let msjError = document.createElement("p");
+                    msjError.setAttribute("class", "messageError");
+                    msjError.setAttribute("id", "messageError");
+                    msjError.textContent = err;
+                    templateNotification.appendChild(msjError);
+
+                document.body.appendChild(templateNotification);
+
+                    deleteMsj(document.getElementById("templateNotificationError"));
+        }
+}
+
+
+    function templateNotificationInfo(err){
+        if(err !== "" && err !== null && err !== undefined){
+
+            let templateNotification =  document.createElement("div");
+                templateNotification.setAttribute("class", "templateNotificationInfo");
+                templateNotification.setAttribute("id", "templateNotificationInfo");
+
+            let msjInfo = document.createElement("p");
+                msjInfo.setAttribute("class", "messageInfo");
+                msjInfo.setAttribute("id", "messageInfo");
+                msjInfo.textContent = err;
+            templateNotification.appendChild(msjInfo);
+
+            document.body.appendChild(templateNotification);
+
+            //delete element
+            deleteMsj(document.getElementById("templateNotificationInfo"))
+        }
+    }
+
+
+
+
+
+
+
+
+    function floatNotificationError(err){
+        templateNotificationError(err);
+    }
+
+    function floatNotificationInfo(err){
+        templateNotificationInfo(err);
+    }
+
  
 
+/*
+    Notification
 
- 
+    * floatNotificationError(err), recibe un mensaje de error emergente para mostrar
+    * floatNotificationInfo(err), recibe un mensaje de emergente para mostrar
+    -----------------------
 
 
 
-/*  
     * withId("id"), obtiene elemento html por id
     * addEnd(idElement, parent), agrega un elemento al final del parent, recibe el id del eleemento a agregar y el id del elemento padre 
     * addFirst(idElement, parent), agrega un elemento al principio del parent, recibe el id del eleemento a agregar y el id del elemento padre 
