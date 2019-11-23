@@ -1,12 +1,20 @@
 {
-  "name": "DOM",
+  "name": "easydom",
   "version": "1.0.0",
-  "description": "",
+  "description": "manipulation DOM",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "jeremias ramirez",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremiasramirez/easydom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jeremiasramirez/easydom/issues"
+  },
+  "homepage": "https://github.com/jeremiasramirez/easydom#readme"
 }
