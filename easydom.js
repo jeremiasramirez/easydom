@@ -110,11 +110,9 @@
     }
 
 
+  
 
-
-
-
-    function windowAsk(msj="Deseas algo?", toGo) {
+    function windowAsk(msj="You want to do?", func) {
 
 
         windowTemplate();
@@ -159,19 +157,21 @@
         let btnCancel = document.getElementById("buttonCancel");
 
         if(btnCancel){
-
             closeTemplateOnly(btnCancel, containerWindow)
         }
 
         let acceptButton = document.getElementById("buttonAccept");
 
         if(acceptButton){
+
             closeTemplateOnly(acceptButton, containerWindow);
+            acceptButton.addEventListener("click", function(){
+                return func();
+            })
+
+            
         }
-        acceptButton.addEventListener("click", function(){
-            toGo = "http://"+toGo
-            location.href=toGo
-        })
+
 
     }
 
