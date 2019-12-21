@@ -1,6 +1,6 @@
 {
   "name": "easydom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "manipulation DOM",
   "main": "index.js",
   "scripts": {
